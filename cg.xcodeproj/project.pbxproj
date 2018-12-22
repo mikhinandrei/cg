@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		61C419AB21B3F29F007B68ED /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 61C419AA21B3F29F007B68ED /* main.cpp */; };
+		61C419B321B3F2EC007B68ED /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61C419B221B3F2EC007B68ED /* OpenGL.framework */; };
+		61C419B521B3F300007B68ED /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61C419B421B3F300007B68ED /* GLUT.framework */; };
+		61C419B921B6E8B1007B68ED /* utilities.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 61C419B721B6E8B1007B68ED /* utilities.cpp */; };
+		61C419BC21B6FB2D007B68ED /* polygon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 61C419BA21B6FB2D007B68ED /* polygon.cpp */; };
+		61C419BF21B6FB5A007B68ED /* point.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 61C419BD21B6FB5A007B68ED /* point.cpp */; };
+		61C419C221C44D31007B68ED /* bezier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 61C419C021C44D31007B68ED /* bezier.cpp */; };
+		61C419CB21CD4CF4007B68ED /* matrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 61C419C921CD4CF4007B68ED /* matrix.cpp */; };
+		61C419CE21CD592B007B68ED /* ppp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 61C419CC21CD592B007B68ED /* ppp.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +33,20 @@
 /* Begin PBXFileReference section */
 		61C419A721B3F29F007B68ED /* cg */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = cg; sourceTree = BUILT_PRODUCTS_DIR; };
 		61C419AA21B3F29F007B68ED /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		61C419B221B3F2EC007B68ED /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		61C419B421B3F300007B68ED /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
+		61C419B621B6E7AF007B68ED /* utilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = utilities.h; sourceTree = "<group>"; };
+		61C419B721B6E8B1007B68ED /* utilities.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = utilities.cpp; sourceTree = "<group>"; };
+		61C419BA21B6FB2D007B68ED /* polygon.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = polygon.cpp; sourceTree = "<group>"; };
+		61C419BB21B6FB2D007B68ED /* polygon.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = polygon.hpp; sourceTree = "<group>"; };
+		61C419BD21B6FB5A007B68ED /* point.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = point.cpp; sourceTree = "<group>"; };
+		61C419BE21B6FB5A007B68ED /* point.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = point.hpp; sourceTree = "<group>"; };
+		61C419C021C44D31007B68ED /* bezier.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = bezier.cpp; sourceTree = "<group>"; };
+		61C419C121C44D31007B68ED /* bezier.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = bezier.hpp; sourceTree = "<group>"; };
+		61C419C921CD4CF4007B68ED /* matrix.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = matrix.cpp; sourceTree = "<group>"; };
+		61C419CA21CD4CF4007B68ED /* matrix.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = matrix.hpp; sourceTree = "<group>"; };
+		61C419CC21CD592B007B68ED /* ppp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ppp.cpp; sourceTree = "<group>"; };
+		61C419CD21CD592B007B68ED /* ppp.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ppp.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +54,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61C419B521B3F300007B68ED /* GLUT.framework in Frameworks */,
+				61C419B321B3F2EC007B68ED /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +67,7 @@
 			children = (
 				61C419A921B3F29F007B68ED /* cg */,
 				61C419A821B3F29F007B68ED /* Products */,
+				61C419B121B3F2EC007B68ED /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,8 +83,29 @@
 			isa = PBXGroup;
 			children = (
 				61C419AA21B3F29F007B68ED /* main.cpp */,
+				61C419CC21CD592B007B68ED /* ppp.cpp */,
+				61C419CD21CD592B007B68ED /* ppp.hpp */,
+				61C419B621B6E7AF007B68ED /* utilities.h */,
+				61C419B721B6E8B1007B68ED /* utilities.cpp */,
+				61C419BA21B6FB2D007B68ED /* polygon.cpp */,
+				61C419BB21B6FB2D007B68ED /* polygon.hpp */,
+				61C419BD21B6FB5A007B68ED /* point.cpp */,
+				61C419BE21B6FB5A007B68ED /* point.hpp */,
+				61C419C021C44D31007B68ED /* bezier.cpp */,
+				61C419C121C44D31007B68ED /* bezier.hpp */,
+				61C419C921CD4CF4007B68ED /* matrix.cpp */,
+				61C419CA21CD4CF4007B68ED /* matrix.hpp */,
 			);
 			path = cg;
+			sourceTree = "<group>";
+		};
+		61C419B121B3F2EC007B68ED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				61C419B421B3F300007B68ED /* GLUT.framework */,
+				61C419B221B3F2EC007B68ED /* OpenGL.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,7 +165,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61C419CE21CD592B007B68ED /* ppp.cpp in Sources */,
+				61C419BF21B6FB5A007B68ED /* point.cpp in Sources */,
+				61C419B921B6E8B1007B68ED /* utilities.cpp in Sources */,
+				61C419CB21CD4CF4007B68ED /* matrix.cpp in Sources */,
 				61C419AB21B3F29F007B68ED /* main.cpp in Sources */,
+				61C419C221C44D31007B68ED /* bezier.cpp in Sources */,
+				61C419BC21B6FB2D007B68ED /* polygon.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
