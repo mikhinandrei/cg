@@ -74,14 +74,25 @@ void clip(void) {
     clipLine(line, p._points);
 }
 
-void perspective(void) {
+void parallel(void) {
     vector<Point> z({
-        Point(-50, -50, 100), Point(10, -50, 100), Point(10, 10, 100), Point(-50, 10, 100),
-        Point(-50, -50, 200), Point(10, -50, 200), Point(10, 10, 200), Point(-50, 10, 200),
+        Point(-150, -150, 100), Point(110, -150, 100), Point(110, 110, 100), Point(-150, 110, 100),
+        Point(-150, -150, 150), Point(110, -150, 150), Point(110, 110, 150), Point(-150, 110, 150),
     });
     Piped p = Piped(z);
     glClear(GL_COLOR_BUFFER_BIT);
-    p.perspective(150);
+    p.proect(150);
+    glFlush();
+}
+
+void perspective(void) {
+    vector<Point> z({
+        Point(-50, -50, 100), Point(110, -50, 100), Point(110, 110, 100), Point(-50, 110, 100),
+        Point(-50, -50, 300), Point(110, -50, 300), Point(110, 110, 300), Point(-50, 110, 300),
+    });
+    Piped p = Piped(z);
+    glClear(GL_COLOR_BUFFER_BIT);
+    p.perspective(130);
     glFlush();
 }
 
@@ -95,11 +106,11 @@ void rotate(void) {
     p.perspectiveRot(100, 1, 1, 1, angle);
     
     vector<Point> k({
-        Point(0, 0, 100), Point(0, 100, 100), Point(100, 100, 100), Point(100, 0, 100),
-        Point(0, 0, 200), Point(0, 100, 200), Point(100, 100, 200), Point(100, 0, 200),
+        Point(-150, -150, 100), Point(10, -150, 100), Point(10, 10, 100), Point(-150, 10, 100),
+        Point(-150, -150, 150), Point(10, -150, 150), Point(10, 10, 150), Point(-150, 10, 150),
     });
     Piped pp = Piped(k);
-    pp.proectRot(100, 1, 1, 1, angle);
+    pp.proectRot(50, -4, 7, 3, angle);
     glFlush();
     glutPostRedisplay();
     angle += 5;
@@ -120,9 +131,9 @@ void renderScene(void) {
         // drawPolygons();
         // bezier();
         // clip();
-    //parallel();
-    // perspective();
-    rotate();
+        // parallel();
+        perspective();
+        // rotate();
     glEnd();
     
     glutSwapBuffers();
